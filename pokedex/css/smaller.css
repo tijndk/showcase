@@ -1,0 +1,75 @@
+html,
+body {
+  overflow: auto;
+}
+/* de container van alle content */
+#pokedex-container {
+  flex-direction: column;
+  height: auto;
+}
+/* de genummerde index aan de linker kant */
+#number-index {
+  width: 100%;
+  max-height: 200px;
+  border-right: none;
+  border-bottom: 4px solid black;
+}
+/* gedeelte waar de uitgebreidere informatie staat */
+#info-top,
+p#flavor-text,
+#evolution {
+  max-width: 880px;
+  width: 90%;
+  min-width: auto;
+  margin: 5px auto;
+}
+/* de informatie van één pokemon */
+#info-top {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+#info-top h2 {
+  width: 100%;
+}
+#info-top canvas {
+  margin: 5px 0;
+}
+#info-top p {
+  width: 100%;
+}
+#info-top button {
+  min-width: 200px;
+  margin: 10px 0;
+  position: relative;
+  bottom: 0;
+  right: 0;
+}
+/* -- einde info één pokemon */
+/* de flavor text met een beschrijving van de pokemon */
+p#flavor-text {
+  padding: 10px;
+}
+/* gedeelte in de evolutie chain */
+.evo-poke {
+  width: 100px;
+  height: 195px;
+}
+/* gedeelte van je team, hun stats, en hun types */
+#team-info-container {
+  border: none;
+  border-top: 4px solid black;
+}
+/* team en stats */
+#team-stats-container {
+  flex-flow: row wrap;
+}
+/* gedeelte van het pokemon team */
+#team-container {
+  justify-content: center;
+}
+/* canvas met totale stats van team */
+#total-stats-canvas {
+  max-width: 100%;
+}

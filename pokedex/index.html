@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokédex App</title>
+    <script type="module" src="./js/main.js"></script>
+    <!-- general css -->
+    <link rel="stylesheet" href="css/general.css" />
+    <!-- css voor kleinere apparaten -->
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 1200px)"
+      href="css/smaller.css"
+    />
+    <link rel="icon" href="./images/favicon.png" />
+  </head>
+  <body>
+    <header>
+      <h1 data-lang="title">POKÉDEX</h1>
+      <!-- selectbox om taal te kiezen -->
+      <select name="lang-select" id="lang-select">
+        <option value="en">🇬🇧 English</option>
+        <option value="nl">🇳🇱 Nederlands</option>
+        <option value="fr">🇫🇷 Français</option>
+        <option value="de">🇩🇪 Deutsch</option>
+        <option value="ja-Hrkt">🇯🇵 日本語</option>
+      </select>
+    </header>
+    <!-- de hele container -->
+    <div id="pokedex-container">
+      <!-- de genummerde index aan de linker kant -->
+      <div id="number-index"></div>
+      <!-- rest van de pagina -->
+      <div id="right-container">
+        <!-- gedeelte met de info van één pokemon en de evolutie chain -->
+        <div id="poke-info-container">
+          <p id="loading-text" data-lang="loading"></p>
+        </div>
+        <!-- gedeelte van je team, hun stats, en hun types -->
+        <div id="team-info-container">
+          <!-- bovenste gedeelte hiervan met team en stats -->
+          <div id="team-stats-container" style="display: none">
+            <!-- je team -->
+            <div id="team-container"></div>
+            <!-- canvas met totale stats van team -->
+            <canvas id="total-stats-canvas" width="425" height="293"></canvas>
+          </div>
+          <!-- totaal aantal types van team -->
+          <div id="combined-types-container"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
