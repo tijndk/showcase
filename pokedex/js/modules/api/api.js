@@ -8,6 +8,9 @@ import { t } from "../langSelect.js";
 
 // fetch alle pokemon t/m pokemon 898
 export async function fetchPokemon(lang) {
+  const allPokemonContainer = document.getElementById("number-index");
+  allPokemonContainer.innerHTML = ""; // zodat je geen dubbele index krijgt bij het switchen van taal
+
   const response = await fetch(
     "https://pokeapi.co/api/v2/pokemon/?limit=898",
     config,
